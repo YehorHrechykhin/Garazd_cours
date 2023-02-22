@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hospital_disease_acne" model="hospital.disease">
+        <field name="name">Acne</field>
+        <field name="description">Acne is a skin condition that causes pimples or "zits." Whiteheads, blackheads, and red, inflamed patches of skin (such as cysts) may develop.
+        </field>
+        <field name="symptoms">
+            Crusting of skin bumps
+            Cysts
+            Papules (small red bumps)
+            Pustules (small red bumps containing white or yellow pus)
+            Redness around the skin eruptions
+            Scarring of the skin
+            Whiteheads
+            Blackheads
+        </field>
+    </record>
+    <record id="hospital_disease_arthritis" model="hospital.disease">
+        <field name="name">Arthritis</field>
+        <field name="description">Arthritis is the swelling and tenderness of one or more joints.</field>
+        <field name="symptoms">
+            Pain
+            Stiffness
+            Swelling
+            Redness
+            Decreased range of motion
+        </field>
+    </record>
+    <record id="hospital_disease_diabetes" model="hospital.disease">
+        <field name="name">Diabetes</field>
+        <field name="description">Diabetes is a chronic (long-lasting) health condition that affects how your body turns food into energy. Your body breaks down most of the food you eat into sugar (glucose) and releases it into your bloodstream. When your blood sugar goes up, it signals your pancreas to release insulin.
+        </field>
+        <field name="symptoms">
+            Feeling more thirsty than usual.
+            Urinating often.
+            Losing weight without trying.
+            Feeling tired and weak.
+            Feeling irritable or having other mood changes.
+            Having blurry vision.
+            Having slow-healing sores.
+        </field>
+    </record>
+
+</odoo>
