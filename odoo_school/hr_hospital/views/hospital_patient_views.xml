@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="full_name"/>
-                <field name="doctor"/>
+                <field name="doctor_id"/>
                 <field name="age" optional="show"/>
                 <field name="gender"/>
                 <field name="phone_number"/>
@@ -25,7 +25,7 @@
                         <group>
                             <field name="first_name"/>
                             <field name="last_name"/>
-                            <field name="doctor"/>
+                            <field name="doctor_id"/>
                             <field name="birthday"/>
                             <field name="gender"/>
                             <field name="phone_number"/>
@@ -52,5 +52,11 @@
             </p>
         </field>
     </record>
+
+    <menuitem id="menu_hospital_patient"
+              name="Patients"
+              parent="hospital_menu_root"
+              action="hospital_patient_action_views"
+              sequence="10"/>
 
 </odoo>

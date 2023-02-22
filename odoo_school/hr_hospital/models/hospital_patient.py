@@ -17,7 +17,7 @@ class HospitalPatient(models.Model):
         string='Name',
         compute='_compute_full_name'
     )
-    doctor = fields.Many2one(
+    doctor_id = fields.Many2one(
         comodel_name='hospital.doctor',
         string='Attending doctor',
         required=True

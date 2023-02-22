@@ -48,4 +48,10 @@
         </field>
     </record>
 
+    <menuitem id="menu_hospital_doctor"
+              name="Doctors"
+              parent="hospital_menu_root"
+              action="hospital_doctor_action_views"
+              sequence="20"/>
+
 </odoo>

@@ -5,12 +5,12 @@ class HospitalAppointment(models.Model):
     _name = 'hospital.appointment'
     _description = 'Hospital Appointments'
 
-    patient = fields.Many2one(
+    patient_id = fields.Many2one(
         comodel_name='hospital.patient',
         string='Patient name',
         required=True
     )
-    doctor = fields.Many2one(
+    doctor_id = fields.Many2one(
         comodel_name='hospital.doctor',
         string='Doctor name',
         required=True
