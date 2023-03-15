@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bus_station_route_view_form" model="ir.ui.view">
+        <field name="name">bus.station.route.view.form</field>
+        <field name="model">bus.station.route</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="station_from_id"/>
+                        <field name="station_to_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bus_station_route_view_tree" model="ir.ui.view">
+        <field name="name">bus.station.route.view.tree</field>
+        <field name="model">bus.station.route</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bus_station_route_action_views" model="ir.actions.act_window">
+        <field name="name">Routes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">bus.station.route</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add your first route !
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="bus_station_route_menu"
+              name="Routes"
+              parent="bus_station_menu_root"
+              action="bus_station_route_action_views"/>
+</odoo>

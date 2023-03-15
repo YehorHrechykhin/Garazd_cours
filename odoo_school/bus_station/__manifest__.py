@@ -1,0 +1,30 @@
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
+{
+    'name': "bus_station",
+    'version': "15.0.1.0.0",
+    'category': 'Industries',
+    'summary': """Module for bus station automation""",
+    'license': 'LGPL-3',
+    'author': "Hrechykhin Yehor",
+    'depends': ['base'],
+    'data': [
+        'security/bus_station_groups.xml',
+        'security/bus_station_security.xml',
+        'security/ir.model.access.csv',
+        'wizard/bus_station_buy_ticket_wizard_views.xml',
+        'views/bus_station_menus.xml',
+        'views/res_partner_views.xml',
+        'views/bus_station_route_views.xml',
+        'views/bus_station_bus_views.xml',
+        'views/bus_station_station_views.xml',
+        'views/bus_station_timetable_views.xml',
+        'views/bus_station_ticket_views.xml',
+        'report/bus_station_timetable_report_template.xml',
+        'report/bus_station_timetable_report.xml',
+    ],
+    'demo': [
+    ],
+    'application': False,
+    'installable': True,
+    'auto_install': False,
+}

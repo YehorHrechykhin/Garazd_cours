@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bus_station_timetable_view_form" model="ir.ui.view">
+        <field name="name">bus.station.timetable.view.form</field>
+        <field name="model">bus.station.timetable</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="route_id"/>
+                            <field name="departure_date"/>
+                            <field name="arrival_date"/>
+                        </group>
+                        <group>
+                            <field name="driver_id"/>
+                            <field name="bus_id"/>
+                            <field name="capacity"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bus_station_timetable_view_tree" model="ir.ui.view">
+        <field name="name">bus.station.timetable.view.tree</field>
+        <field name="model">bus.station.timetable</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="%(action_buy_ticket_wizard)d" string="Buy Ticket"
+                            class="btn btn-primary"
+                            type="action"/>
+                </header>
+                <field name="route_id"/>
+                <field name="bus_id"/>
+                <field name="departure_date"/>
+                <field name="arrival_date"/>
+                <field name="capacity"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bus_station_timetable_view_calendar" model="ir.ui.view">
+        <field name="name">bus.station.timetable.view.calendar</field>
+        <field name="model">bus.station.timetable</field>
+        <field eval="2" name="priority"/>
+        <field name="arch" type="xml">
+            <calendar date_start="departure_date" date_stop="arrival_date"
+                      string="timetable" mode="month">
+                <field name="route_id"/>
+                <field name="bus_id"/>
+                <field name="capacity"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="bus_station_timetable_view_kanban" model="ir.ui.view">
+        <field name="name">bus.station.timetable.view.kanban</field>
+        <field name="model">bus.station.timetable</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_group_by="route_id">
+                <field name="driver_id"/>
+                <field name="bus_id"/>
+                <field name="departure_date"/>
+                <field name="arrival_date"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_card_header_title">
+                                <div>
+                                    <p>
+                                        <field name="driver_id"/>
+                                    </p>
+                                    <p>
+                                        <field name="bus_id"/>
+                                    </p>
+                                    <p>
+                                        <field name="departure_date"/>
+                                        -
+                                        <field name="arrival_date"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="bus_station_timetable_action_views" model="ir.actions.act_window">
+        <field name="name">Timetable</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">bus.station.timetable</field>
+        <field name="view_mode">tree,form,calendar,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add your first timetable !
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="bus_station_timetable_menu"
+              name="Timetable"
+              parent="bus_station_menu_root"
+              action="bus_station_timetable_action_views"/>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_station_bus_mercedes" model="bus.station.bus" forcecreate="True">
+        <field name="model">Mercedes</field>
+        <field name="bus_number">AX 4576 MM</field>
+        <field name="capacity">30</field>
+        <field name="last_technical_inspection_date" eval="datetime.now()"/>
+    </record>
+
+    <record id="bus_station_bus_volkswagen" model="bus.station.bus" forcecreate="True">
+        <field name="model">Volkswagen</field>
+        <field name="bus_number">AН 3333 AТ</field>
+        <field name="capacity">40</field>
+        <field name="last_technical_inspection_date" eval="datetime.now()"/>
+    </record>
+
+    <record id="bus_station_bus_volvo" model="bus.station.bus" forcecreate="True">
+        <field name="model">Volvo</field>
+        <field name="bus_number">AA 7132 AC</field>
+        <field name="capacity">30</field>
+        <field name="last_technical_inspection_date" eval="datetime.now()"/>
+    </record>
+
+</odoo>

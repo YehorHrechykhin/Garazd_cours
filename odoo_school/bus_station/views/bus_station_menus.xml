@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="bus_station_menu_root"
+              name="Bus Station"
+              web_icon="bus_station,static/description/icon.png"/>
+
+</odoo>

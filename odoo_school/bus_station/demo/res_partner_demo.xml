@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="base.res_partner_address_100" model="res.partner" forcecreate="True">
+        <field name="name">Oleg</field>
+        <field name="is_driver" eval="True"/>
+    </record>
+
+    <record id="base.res_partner_address_101" model="res.partner" forcecreate="True">
+        <field name="name">Victor</field>
+        <field name="is_driver" eval="True"/>
+    </record>
+
+    <record id="base.res_partner_address_102" model="res.partner" forcecreate="True">
+        <field name="name">Ivan</field>
+        <field name="is_driver" eval="True"/>
+    </record>
+
+</odoo>
