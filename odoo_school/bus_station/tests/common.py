@@ -1,3 +1,4 @@
+from datetime import date
 from odoo.tests.common import TransactionCase
 
 
@@ -24,3 +25,9 @@ class TestCommon(TransactionCase):
         self.bus_station_demo = self.env['bus.station.station'].create({
             'name': 'Test Station',
             'city': 'Test City'})
+        self.bus_demo = self.env['bus.station.bus'].create({
+            'model': 'Test Bus',
+            'bus_number': '1234',
+            'capacity': 50,
+            'last_technical_inspection_date': date(2021, 1, 1),
+        })
