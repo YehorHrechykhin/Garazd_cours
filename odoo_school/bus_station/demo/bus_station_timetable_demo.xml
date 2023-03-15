@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_station_timetable_1" model="bus.station.timetable">
+        <field name="route_id" ref="bus_station_route_kharkiv_kyiv"/>
+        <field name="driver_id" ref="res_partner_address_100"/>
+        <field name="bus_id" ref="bus_station_bus_mercedes"/>
+        <field name="departure_date" eval="datetime.now()"/>
+        <field name="arrival_date" eval="datetime.now() + timedelta(hours=6)"/>
+    </record>
+
+    <record id="bus_station_timetable_2" model="bus.station.timetable">
+        <field name="route_id" ref="bus_station_route_kharkiv_lviv"/>
+        <field name="driver_id" ref="res_partner_address_101"/>
+        <field name="bus_id" ref="bus_station_bus_volkswagen"/>
+        <field name="departure_date" eval="datetime.now()"/>
+        <field name="arrival_date" eval="datetime.now() + timedelta(hours=20)"/>
+    </record>
+
+    <record id="bus_station_timetable_3" model="bus.station.timetable">
+        <field name="route_id" ref="bus_station_route_kyiv_lviv"/>
+        <field name="driver_id" ref="res_partner_address_102"/>
+        <field name="bus_id" ref="bus_station_bus_volvo"/>
+        <field name="departure_date" eval="datetime.now()"/>
+        <field name="arrival_date" eval="datetime.now() + timedelta(hours=3)"/>
+    </record>
+
+</odoo>

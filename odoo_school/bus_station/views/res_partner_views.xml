@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form_inherit_bus_station" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.bus.station</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website']" position="replace">
+                <field name="website" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='title']" position="replace">
+                <field name="title" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="replace">
+                <field name="is_driver"/>
+            </xpath>
+            <xpath expr="//field[@name='function']" position="after">
+                <field name="driver_license"
+                       attrs="{'invisible':[('is_driver', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='function']" position="after">
+                <field name="route_id"
+                       attrs="{'invisible':[('is_driver', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_view_tree_inherit_bus_station" model="ir.ui.view">
+        <field name="name">res.partner.view.tree.inherit.bus.station</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="replace">
+                <field name="is_driver"/>
+            </xpath>
+            <xpath expr="//field[@name='is_driver']" position="after">
+                <field name="route_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_inherit_bus_station_action_views" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add your first employee !
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="bus_station_employees"
+              name="Employees"
+              parent="bus_station_menu_root"
+              action="res_partner_inherit_bus_station_action_views"
+              sequence="10"/>
+</odoo>

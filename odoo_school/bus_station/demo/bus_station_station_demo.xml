@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_station_station_kharkiv_central" model="bus.station.station">
+        <field name="name">Central</field>
+        <field name="city">Kharkiv</field>
+    </record>
+
+    <record id="bus_station_station_kyiv_central" model="bus.station.station">
+        <field name="name">Central</field>
+        <field name="city">Kyiv</field>
+    </record>
+
+    <record id="bus_station_station_lviv_central" model="bus.station.station">
+        <field name="name">Central</field>
+        <field name="city">Lviv</field>
+    </record>
+
+</odoo>

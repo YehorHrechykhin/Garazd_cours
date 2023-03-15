@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_station_ticket_1" model="bus.station.ticket">
+        <field name="timetable_id" ref="bus_station_timetable_1"/>
+        <field name="seat_number">1</field>
+    </record>
+
+    <record id="bus_station_ticket_2" model="bus.station.ticket">
+        <field name="timetable_id" ref="bus_station_timetable_2"/>
+        <field name="seat_number">1</field>
+    </record>
+
+    <record id="bus_station_ticket_3" model="bus.station.ticket">
+        <field name="timetable_id" ref="bus_station_timetable_3"/>
+        <field name="seat_number">1</field>
+    </record>
+
+</odoo>
